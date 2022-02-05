@@ -9,6 +9,7 @@
   --cl-very-dark-cyan: hsl(179, 100%, 13%);
   --cl-light-gray: hsl(0, 0%, 95%);
   --cl-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --cl-white: hsl(0, 0%, 100%);
 }
 
 @media all and (min-width: 768px) {
@@ -26,6 +27,7 @@ html {
 h1 {
   font: 700 2.5em 'Big Shoulders Display';
   padding: 1.5rem 0;
+  text-transform: uppercase;
 }
 
 p {
@@ -36,9 +38,13 @@ p {
 a {
   display: inline-block;
   text-decoration: none;
-  background: var(--cl-transparent-white);
+  background: var(--cl-white);
   padding: 1rem 1.5rem;
   border-radius: 2rem;
+}
+
+a:hover {
+  background: var(--cl-transparent-white);
 }
 
 .container {
