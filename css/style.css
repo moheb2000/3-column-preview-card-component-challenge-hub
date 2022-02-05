@@ -1,2 +1,91 @@
 @import "reset.css";
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  --fs-default: 15px;
+
+  --cl-bright-orange: hsl(31, 77%, 52%);
+  --cl-dark-cyan: hsl(184, 100%, 22%);
+  --cl-very-dark-cyan: hsl(179, 100%, 13%);
+  --cl-light-gray: hsl(0, 0%, 95%);
+  --cl-transparent-white: hsla(0, 0%, 100%, 0.75);
+}
+
+@media all and (min-width: 768px) {
+  :root {
+    --fs-default: 16px;
+  }
+}
+
+html {
+  background: var(--cl-light-gray);
+  color: var(--cl-transparent-white);
+  font: 400 var(--fs-default) 'Lexend Deca';
+}
+
+h1 {
+  font: 700 2.5em 'Big Shoulders Display';
+  padding: 1.5rem 0;
+}
+
+p {
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--cl-transparent-white);
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+}
+
+.container {
+  width: 90%;
+  margin: 5% auto;
+  border-radius: .5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.sedans {
+  background: var(--cl-bright-orange);
+  padding: 3rem;
+}
+
+.sedans a {
+  color: var(--cl-bright-orange);
+}
+
+.suvs {
+  background: var(--cl-dark-cyan);
+  padding: 3rem;
+}
+
+.suvs a {
+  color: var(--cl-dark-cyan);
+}
+
+.luxury {
+  background: var(--cl-very-dark-cyan);
+  padding: 3rem;
+}
+
+.luxury a {
+  color: var(--cl-very-dark-cyan);
+}
+
+@media all and (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .container {
+    width: 70%;
+  }
+}
